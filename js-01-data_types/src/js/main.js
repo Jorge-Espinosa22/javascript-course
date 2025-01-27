@@ -158,7 +158,79 @@ console.log( typeof myName ); // 'undefined'
 
  */
 const edadMascota = 10;
-// conversión explícita a String
+// conversión explícita a String ==================
 const edadMascotaString = String( edadMascota );
 console.log(`Mi mascota tiene ${ edadMascotaString } años`);
 console.log(`Mi mascota tiene ${ edadMascota } años`);
+console.log( String( true ) ); // "true"
+console.log( String( null ) ); // 
+console.log( String( undefined ) ); // "undefined"
+console.log( String( [] ) ); // empty Array-> ""
+console.log( String( [2,3,4,5,null,3] ) ); // "2,3,4,5,,3"
+console.log( String( {} ) ); // [object Object]
+console.log( String( {name:"Serch", active:true} ) ); // [object Object]
+// Para lo objetos se recomienda usar el métod JSON.stringyfy( object )
+// convierte un objeto en formato JSON
+console.log( JSON.stringify( {name:"Serch", active:true} ) ); // {"name":"Serch","active":true}
+
+
+// conversión implícita a String ==================
+const costo = "100"
+const costoConIva = costo * 1.16 ; //116.00 conversion implicita
+console.log (costoConIva);
+
+// conversión explícita a String ==================
+const precioCroquetas = "2000";
+const precioJabon ="300";
+const precioVitaminas = "600.40";
+const costoTotal = precioCroquetas + precioJabon + precioVitaminas; // 2000300.50600.30
+console.log (costoTotal);
+
+/*
+ Number() Vs parseInt() y parseFloat()
+  - Number convierte enteros y decimales
+  - Number devuelve NaN si la cadena contiene algún caracter no numérico
+  - Con parseInt y parseFloat, si la entrada comienza con un valor no numérico devuelve NaN
+  - parseInt convierte solo pa parte entera
+  - parseFloat convierte la parte entera y decimales
+  - parseInt y parseFloat realiza la conversión hasta encontrar un caracter no numérico
+*/
+console.log( Number("68.58") ); // 68.58
+console.log( parseInt("68.58") ); // 68
+console.log( parseFloat("68.58") ); // 68.58
+console.log( Number("68.58 dolares") ); // NaN
+console.log( parseInt("68.58 dolares") ); // 68
+console.log( parseFloat("68.58 dolares") ); // 65.58
+console.log( Number("$68.58 dolares") ); // NaN
+console.log( parseInt("$68.58 dolares") ); // NaN
+console.log( parseFloat("$68.58 dolares") ); // NaN
+
+console.log(Number(true)); //1
+console.log(Number(false)); //0
+
+console.log(Number([])); //0 Empty Arryve
+console.log(Number([30])); //30
+console.log(Number([30,40])); //NaN
+
+// Conversión a tipo boolean
+// En la conversión a boolean los siguientes valores son false:
+// ""(empty string), 0, NaN, null, undefined
+console.log( Boolean(1) ); // true
+console.log( Boolean(10000) ); // true
+console.log( Boolean(-1000) ); // true
+console.log( Boolean(0) ); // false
+console.log( Boolean(NaN) ); // false
+console.log( Boolean("") ); // false
+console.log( Boolean(" ") ); // true
+console.log( Boolean("1") ); // true
+console.log( Boolean("0") ); // true
+
+// Resumen:
+// Number()
+// [] (empty array) -> 0, [30]-> 30, [30,30]->NaN, false-> 0, true-> 1
+// String()
+// [] -> "", [12,2]->"12,2", function(){}-> "function(){}"
+// {} ->"[object,object]", {clave:valor, age:17} ->"[object,object]"
+// Para convertir un objeto a string, la forma correcta es usar
+// el método JSON.stringyfy( objeto );
+
