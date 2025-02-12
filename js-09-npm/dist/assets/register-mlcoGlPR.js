@@ -1,4 +1,4 @@
-import{i as l}from"./header-DsAngAsn.js";import{i as a}from"./footer-CCTUu1Yo.js";const o=e=>{e.addEventListener("submit",i=>{i.preventDefault(),console.log("Manejo del botón registro")})};window.addEventListener("load",()=>{document.getElementById("app").innerHTML=`
+import{i as l}from"./bootstrap.esm-DhjEgBJg.js";import{i as a}from"./footer-CCTUu1Yo.js";const o=e=>{e.addEventListener("submit",i=>{i.preventDefault(),console.log("Manejo del botón registro")})};window.addEventListener("load",()=>{document.getElementById("app").innerHTML=`
     ${l()} 
     <main id="app" class="container my-4">
         <div class="row justify-content-center">
