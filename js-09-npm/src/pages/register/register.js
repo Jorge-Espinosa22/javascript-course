@@ -4,6 +4,7 @@ import "./register.css"
 import { insertMainHeader } from "/src/modules/header/header";
 import { insertMainFooter } from "/src/modules/footer/footer";
 import { handlerRegister } from "./handlerRegister";
+import * as bootstrap from 'bootstrap';
 
 window.addEventListener( "load", () => {
     

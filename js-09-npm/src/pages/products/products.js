@@ -4,6 +4,7 @@ import "./products.css"
 import { insertMainHeader } from "/src/modules/header/header";
 import { insertMainFooter } from "/src/modules/footer/footer";
 import { getProducts } from "../../modules/api/getProducts/getProducts.js";
+import * as bootstrap from 'bootstrap';
 
 window.addEventListener( "load", async() => document.getElementById("app").innerHTML = `
     ${insertMainHeader()} 

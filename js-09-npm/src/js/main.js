@@ -3,7 +3,8 @@ import "/src/css/styles.scss"
 import { insertMainHeader } from "/src/modules/header/header";
 import { insertMainFooter } from "/src/modules/footer/footer";
 import { welcome } from "../pages/welcome/welcome";
-
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap';
 /**
  * El método onload de window en JavaScript se utiliza para ejecutar 
  * una función cuando todos los elementos de una página web han 
